@@ -1,0 +1,62 @@
+
+<button (click)='getData()'>Get all records </button>
+<ejs-grid [dataSource]='data | async' [editSettings]='editSettings' [toolbar]='toolbar' (dataSourceChanged)='dataSourceChanged($event)' (dataStateChange)= 'dataStateChange($event)'>
+     <e-columns>
+    <e-column
+      field="id"
+      headerText="Task ID"
+      width="120"
+      textAlign="Right"
+      isPrimaryKey="true"
+      type="number"
+    ></e-column>
+    <e-column field="TaskName" headerText="Task Name" width="225"></e-column>
+    <e-column
+      field="StartDate"
+      headerText="Start Date"
+      width="150"
+      format="yMd"
+      type="datetime"
+      editType="datepickeredit"
+    ></e-column>
+    <e-column
+      field="EndDate"
+      headerText="End Date"
+      width="150"
+      format="yMd"
+      type="datetime"
+      editType="datepickeredit"
+    ></e-column>
+    <e-column
+      field="Duration"
+      headerText="Duration"
+      type="number"
+      textAlign="Right"
+      width="130"
+      editType="numericedit"
+    ></e-column>
+    <e-column
+      field="Progress"
+      headerText="Progress"
+      type="number"
+      textAlign="Right"
+      width="130"
+      editType="numericedit"
+    ></e-column>
+    <e-column
+      field="ParentID"
+      headerText="Parent ID"
+      type="number"
+      textAlign="Right"
+      width="130"
+      editType="numericedit"
+    ></e-column><e-column
+    field="isParent"
+    headerText="Is Parent"
+    type="number"
+    textAlign="Right"
+    width="130"
+    editType="boolean"
+  ></e-column> </e-columns
+>
+</ejs-grid>
